@@ -18,3 +18,9 @@ Open the Canopy Editor by clicking the Editor link in the Canopy Home Screen. In
 !pip install pydotplus
 ```
 
+### Open a iPython Notebook / Jupiter Notebook file
+
+
+iPython Notebook files are files with the `.ipynb` extension. There are several of these in the files that were downloaded from the Sundog website in the Course Notes section above. Double click on the file `outliers.ipynb` which will cause Canopy to open the file in the default browser (running the Jupiter Notebook locally via localhost:8888).
+
+Now practice some Python 101 exercises by opening the file `python101.ipynb`.
