@@ -18,6 +18,12 @@ Open the Canopy Editor by clicking the Editor link in the Canopy Home Screen. In
 !pip install pydotplus
 ```
 
+Note that to run commands from within the Canopy Editor you must prefix with a bang(!). For example to see the version of Python `python --version` run the following in the Canopy Editor:
+
+```
+!python --version
+```
+
 ### Open a iPython Notebook / Jupiter Notebook file
 
 
