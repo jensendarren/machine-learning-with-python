@@ -105,14 +105,14 @@ sldf
 
 ### Types of Data
 
-*Numerical Data* - a quantitave measurement. There are two typs of numerical data:
+**Numerical Data** - a quantitave measurement. There are two typs of numerical data:
 
 * Discrete Data - Basically Integers - like 1,2,3 (e.g. counts)
 * Continuous Data - Basically Floats - has infinite possibilities (e.g. heights)
 
-*Categorical Data* - a qualititave measurement that does not have a mathematical meaning (e.g. Gender, Race, Religion, Political Affiliation etc)
+**Categorical Data** - a qualititave measurement that does not have a mathematical meaning (e.g. Gender, Race, Religion, Political Affiliation etc)
 
-*Ordinal Data* - a mix of Numerical and Categorical Data (e.g. rating)
+**Ordinal Data** - a mix of Numerical and Categorical Data (e.g. rating)
 
 
 
