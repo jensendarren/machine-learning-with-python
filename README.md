@@ -82,16 +82,15 @@ df.head()
 
 Note the first line of code `%matplotlib inline` denotes that matplotlib charts will be rendered within the notebook and not in a new window. The rest of this code is self explainatory.
 
-`head()` is a handy way to visualize what you've loaded. 
-`shape` property retuns # of rows and # columns
-`size` property returns # of rows x # columns
-`len(df)` returns the number of rows in a DataFrame
-`df['Hired'][:5]` extract the first 5 rows of the hired column
-`df['Hired'][5]` pluck the hired value in the 5th row
-`df[['Years Experience', 'Hired']]` returns all rows for 'Years Experience' & 'Hired'
-`degree_counts = df['Level of Education'].value_counts()` grabs counts of each distinct value for 'Level of Education'
-`degree_counts.plot(kind='bar')` plots a histogram of the servies degree_counts.
-
+* `head()` is a handy way to visualize what you've loaded. 
+* `shape` property retuns # of rows and # columns
+* `size` property returns # of rows x # columns
+* `len(df)` returns the number of rows in a DataFrame
+* `df['Hired'][:5]` extract the first 5 rows of the hired column
+* `df['Hired'][5]` pluck the hired value in the 5th row
+* `df[['Years Experience', 'Hired']]` returns all rows for 'Years Experience' & 'Hired'
+* `degree_counts = df['Level of Education'].value_counts()` grabs counts of each distinct value for 'Level of Education'
+* `degree_counts.plot(kind='bar')` plots a histogram of the servies degree_counts.
 
 #### Pandas Exercise
 
@@ -103,3 +102,19 @@ sldf = sldf.sort_values(['Previous employers'])
 sldf.plot(kind='bar')
 sldf
 ```
+
+### Types of Data
+
+*Numerical Data* - a quantitave measurement. There are two typs of numerical data:
+
+* Discrete Data - Basically Integers - like 1,2,3 (e.g. counts)
+* Continuous Data - Basically Floats - has infinite possibilities (e.g. heights)
+
+*Categorical Data* - a qualititave measurement that does not have a mathematical meaning (e.g. Gender, Race, Religion, Political Affiliation etc)
+
+*Ordinal Data* - a mix of Numerical and Categorical Data (e.g. rating)
+
+
+
+
+
