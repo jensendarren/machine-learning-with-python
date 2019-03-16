@@ -133,4 +133,8 @@ Note that if you have the entire dataset (entire population of data) then divide
 
 So given a dataset of (1,4,5,4,8) which has a Mean of 4.4 and an SD of 2.24 so 1 SD of the Mean for this dataset is within the range 2.16 <-> 6.64 and any value outside of that range is an outlier.
 
+**Probability Density Function** Works with Continuous Data. Gives the probability of a (continuous) data point falling within some given range of a given value.
+
+**Probability Mass Function** Works with Discrete Data. Gives the probability of a (discrete) data point falling within some given range of a given value.
+
 
