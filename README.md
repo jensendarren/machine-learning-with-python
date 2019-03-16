@@ -114,7 +114,18 @@ sldf
 
 **Ordinal Data** - a mix of Numerical and Categorical Data (e.g. rating)
 
+### Statistics Refresher
 
+**Mean** is just the average. So add all values and divide by the count.
 
+**Median** is the middle value in the sorted set. If there is no exact middle then take the average of the two mid values.
+
+**Mode** is the most common value in the dataset.
+
+**Variance** How spread is the dataset? What is the shape of the dataset? Known as 'sigma squared'. Specifically, it is **the average of the squared differences from the mean**. The reason why we square the diffences is so that -ve variances count as much as +ve variances otherwise they would cancel each other out. This also gives more weight to the outliers.
+
+**Standard Deviation** This is the square root of the variance. This is known as 'sigma'. It is the way we can identify what is an outlier in our dataset. So if you are within 1 Standard Deviation of the mean then that is considered a 'typical value' with everything outside of that considered an outlier. 
+
+So given a dataset of (1,4,5,4,8) which has a Mean of 4.4 and an SD of 2.24 so 1 SD of the Mean for this dataset is within the range 2.16 <-> 6.64 and any value outside of that range is an outlier.
 
 
