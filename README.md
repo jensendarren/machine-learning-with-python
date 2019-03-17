@@ -137,4 +137,6 @@ So given a dataset of (1,4,5,4,8) which has a Mean of 4.4 and an SD of 2.24 so 1
 
 **Probability Mass Function** Works with Discrete Data. Gives the probability of a (discrete) data point falling within some given range of a given value.
 
+### Data Distributions
+
 
