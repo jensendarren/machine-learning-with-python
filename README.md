@@ -139,4 +139,6 @@ So given a dataset of (1,4,5,4,8) which has a Mean of 4.4 and an SD of 2.24 so 1
 
 ### Data Distributions
 
+Open up the [Distributions Examples](/examples/Distributions.ipynb) notebook.
 
+**Uniform Distribution** Has a flat constant probability of any value occouring.
