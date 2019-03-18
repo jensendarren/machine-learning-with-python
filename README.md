@@ -143,5 +143,15 @@ Open up the [Distributions Examples](/examples/Distributions.ipynb) notebook.
 
 **Uniform Distribution** Has a flat constant probability of any value occouring. So the probability function would also be a flat line accross the range of the values. Outside of these values the line (probabilty) would be 0.
 
+**Normal / Gaussian Distribution** Is generally a bell shape curve. Its possible to plot the Proability Density Function (PDF) for a Normal Distribution. See the Distributions.ipynb for details.
+
+**Exponential PDF / "Power Law"** An exponential curve that generally has a high probability at the start and rapidly tapers off after.
+
+**Binomial Probability Mass Function** Used for discrete values. It will present a shape similar to normal except the value will be 0 in between each discrete value and the spike up to >0 when a discrete value is in the X axis. There are shape parameters, n & p which can be used to change the shape of the distribution.
+
+**Poisson Probability Mass Function** Shows the probabilty of getting a value on a specific day. So its essentially probaily of something happening at a particular time. Looks a bit like normal distribution curve.
+
+
+
 
 
