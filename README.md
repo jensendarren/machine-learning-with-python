@@ -151,7 +151,25 @@ Open up the [Distributions Examples](/examples/Distributions.ipynb) notebook.
 
 **Poisson Probability Mass Function** Shows the probabilty of getting a value on a specific day. So its essentially probaily of something happening at a particular time. Looks a bit like normal distribution curve.
 
+### Percentiles & Moments
 
+Open up the [Percentiles Examples](/examples/Percentiles.ipynb) notebook.
+
+**Percentile** The point at which x% of the values are less than that value? For example, income distribution. Lets say the 99th percentile is $550K. That means that 99% of the population are earning less than that value (and 1% are earning more!). So the 50th percential is where half the population are making more than that and half are making more than that - it is right in the middle and is therefore also the median value!
+
+**Quartiles** In a Normal Distribution, there are Q1 and Q3 in the middle of the distribution, together making 50% of the values split equally between Q1 and Q3 (25% each). The difference between Q1 and Q3 is called the 'Inter Quartile Range' (IQR).
+
+Open up the [Moments Examples](/examples/Moments.ipynb) notebook.
+
+**Moment** is the measurement of the shape of the distribution. There are 4 moments that we will consider. 
+
+**First Moment** Is simply the mean.
+
+**Second Moment** Is simply the varience.
+
+**Third Moment** Is the **skew** of the data. Basically it is how 'lopsided' the distribution is (compared to a normal distribution) Its just stretching out the tail on one side or the other. There can be a **-ve skew** (longer tail on the left side) and a **+ve skew** (longer tail on the right side).
+
+**Fourth Moment** Is the **kurtosis** of the data. Its basically how 'peaked' the distribution is (compared to a normal distribution). Its the measurement of the thickness of the tail and the sharpness of the tail.
 
 
 
