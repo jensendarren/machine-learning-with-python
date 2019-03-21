@@ -199,6 +199,39 @@ In the above example we can see that the `plot` function takes a third parameter
 * `r:` red dotted line
 * `g--` green dashed line
 
+### Covariance and Correlation
+
+Open up the [Covariance Correlation Examples](/examples/CovarianceCorrelation.ipynb) notebook.
+
+A measurement of how closely dependent two values are related to each other.
+
+Calculating covariance is quite involved so we will let python handle this for us. 
+
+Interpreting covariance is hard. We know that a covariance close to 0 means there is not much correlation between the variables. However, for large covariances - far from 0 means there IS a correlation but how 'large' is large? This is where the correlation value comes to the rescue!
+
+Correlation is the covariance divided by the SD of both variables which normalizes the value. 
+
+Now we can say with confidence that a correlation value of:
+
+* -1 = perfect inverse correlation
+* 0 = no correlation at all
+* 1 = perfect correlation
+
+NOTE: That a perfect correlation does not imply causation (that one value directly affects the other). A controlled, randomized experiment is needed to make that conclusion.
+
+Python functions are:
+
+```
+numpy.cov(x,y) # calculates the covariance
+np.corrcoef(x,y) # calculates the correlation
+```
+
+
+
+
+
+
+
 
 
 
