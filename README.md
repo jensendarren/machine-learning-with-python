@@ -234,7 +234,7 @@ If we have two events that depend on each other what is the probability that bot
 
 * P(A,B) = Probability of A & B occuring independently of each other
 * P(B|A) = Probability of B occuring given that A occured (implying a dependencey between B & A)
-* P(B|A) = P(A,B) / P(A) <- this is our formula!
+* P(B|A) = P(A,B) / P(A) **<- this is our formula!**
 
 **Example**
 
