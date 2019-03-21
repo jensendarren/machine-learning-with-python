@@ -171,5 +171,40 @@ Open up the [Moments Examples](/examples/Moments.ipynb) notebook.
 
 **Fourth Moment** Is the **kurtosis** of the data. Its basically how 'peaked' the distribution is (compared to a normal distribution). Its the measurement of the thickness of the tail and the sharpness of the tail.
 
+### Matplotlib
+
+Open up the [Percentiles Examples](/examples/MatPlotLib.ipynb) notebook.
+
+**Multiple plots on one graph**
+
+```
+plt.plot(x, norm.pdf(x))
+plt.plot(x, norm.pdf(x, 1.0, 0.5)) # the two params here are _mean_ and _standard deviation_).
+plt.show()
+```
+
+**Custom Axis**
+
+One you have the axis object use `set_xlim` and `set_ylim` to set the extents of each axis. Also use `set_xticks` and `set_yticks` to define exactly where the ticks on the axis appear.
+
+**Line types and Colours**
+
+```
+plt.plot(x, norm.pdf(x), 'b-')
+```
+
+In the above example we can see that the `plot` function takes a third parameter which represents the color and the type of the line. In this example `b-` means **blue solid line**. Some more examples are:
+
+* `b-` blue solid line
+* `r:` red dotted line
+* `g--` green dashed line
+
+
+
+
+
+
+
+
 
 
