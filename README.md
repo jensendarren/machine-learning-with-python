@@ -226,8 +226,27 @@ numpy.cov(x,y) # calculates the covariance
 np.corrcoef(x,y) # calculates the correlation
 ```
 
+### Conditional Probability
 
+If we have two events that depend on each other what is the probability that both will occur?
 
+**Notation**
+
+* P(A,B) = Probability of A & B occuring independently of each other
+* P(B|A) = Probability of B occuring given that A occured (implying a dependencey between B & A)
+* P(B|A) = P(A,B) / P(A) <- this is our formula!
+
+**Example**
+
+I give my students two tests (A & B). 60% pass BOTH tests and 80% passed the FIRST test (A). What is the % of students who passed the first test also passed the second test (so what is P(B|A))?
+
+Therefore:
+
+* P(A,B) = 0.6
+* P(A) = 0.8
+* P(B|A) = 0.6 / 0.8 = 0.75
+
+So the answer is 75%
 
 
 
