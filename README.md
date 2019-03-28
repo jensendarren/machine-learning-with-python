@@ -277,7 +277,7 @@ The probability of someone in their 30's buying something is just the percentage
 
 ```
 P(E|F) = float(purchases[30]) / float(totals[30])
-P(E|F) = 4974/16619 =0.29
+P(E|F) = 4974/16619 = 0.29
 ```
 
 #### Exercise 2
@@ -301,7 +301,7 @@ P(E) = 0.45
 
 #### Exercise 4
 
-If E and F were independent, then we would expect P(E|F) to be about the same as P(E). But they're not; PE is 0.45, and P(E|F) is 0.29. So, that tells us that E and F are dependent, the liklyhood of making a purchase and the age group of that person (which we know they are in this example.)
+If E and F were independent, then we would expect P(E|F) to be about the same as P(E). But they're not; PE is 0.45, and P(E|F) is 0.29. So, that tells us that E and F are dependent, the liklyhood of making a purchase and the age group of that person (which we know they are in this example).
 
 So it makes sense to consider conditional probability! :)
 
@@ -316,7 +316,23 @@ P(E)P(F) = 0.45 x 0.16 = 0.072
 P(E,F) is different from P(E|F). P(E,F) would be the probability of both being in your 30's and buying something, out of the total population - not just the population of people in their 30's:
 
 ```
-P(E,F) = ?
+P(E,F) = float(purchases[30]) / 100000
+P(E,F) = 4974/100000
+P(E,F) = 0.049
+```
+
+
+#### Exercise 6
+
+When E & F are independent of each other we can say P(E,F) = P(E)P(F). However, in our example they are not (P(E)P(F) = 0.072 & P(E,F) = 0.049). This is because they are dependent on each other. 
+
+So instead we can rely on the formulae of conditional probability: P(E|F) = P(E,F)/P(F) and sure enough, it is:
+
+```
+P(E|F) = (purchases[30] / 100000.0) / P(F)
+P(E|F) = (4974/100000) / 0.16
+P(E|F) = 0.049 / 0.16
+P(E|F) = 0.31
 ```
 
 
