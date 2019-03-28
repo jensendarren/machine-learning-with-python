@@ -228,6 +228,8 @@ np.corrcoef(x,y) # calculates the correlation
 
 ### Conditional Probability
 
+Open up the [Conditional Probability Examples](/examples/ConditionalProbabilityExercise.ipynb) notebook.
+
 If we have two events that depend on each other what is the probability that both will occur?
 
 **Notation**
@@ -248,6 +250,74 @@ Therefore:
 
 So the answer is 75%
 
+### Conditional Probability Examples
+
+Open up the [Conditional Probability Examples](/examples/ConditionalProbabilityExercise.ipynb) notebook.
+
+In this example we have 100K people that are evenly distributed amoung 6 age groups (20s, 30s, 40s, 50s, 60s & 70s) in one [Python Dictionary](https://www.w3schools.com/python/python_dictionaries.asp) and have their purchase frequencies stored in another Python Dictionary as described below:
+
+"totals" contains the total number of people in each age group. "purchases" contains the total number of things purchased by people in each age group. The grand total of purchases is in totalPurchases, and we know the total number of people is 100,000.
+
+The two dictionairies might look like the ones below:
+
+```
+{20: 16576, 30: 16619, 40: 16632, 50: 16805, 60: 16664, 70: 16704} # totals dictionary
+{20: 3392, 30: 4974, 40: 6670, 50: 8319, 60: 9944, 70: 11713} # purchases dictionary
+45012 # total purchases
+100000 # total population
+```
+
+So as you can see in the above two dictionaries, the `totals` is pretty much evenly spread (as intended, even though of course age population is not distributed like this!) and `purchases` is clearly depentent on the age group, with younger people purchasing less than older people (again as intended for this exercise). The code to generate this dataset is in the [Conditional Probability Examples](/examples/ConditionalProbabilityExercise.ipynb) notebook.
+
+#### Exercise 1
+
+Compute P(E|F), where E is "purchase" and F is "you're in your 30's". 
+
+The probability of someone in their 30's buying something is just the percentage of how many 30-year-olds bought something. So, given the above dataset:
+
+```
+P(E|F) = float(purchases[30]) / float(totals[30])
+P(E|F) = 4974/16619 =0.29
+```
+
+#### Exercise 2
+
+P(F) is just the probability of being 30 in this data set or the percentage of the total population who are in their 30s:
+
+```
+P(F) = float(totals[30]) / 100000
+P(F) = 16619 / 100000 = 0.16
+```
+
+#### Exercise 3
+
+P(E) is the overall probability of buying something, regardless of your age.
+
+```
+P(E) = totalPurchases / 100000
+P(E) = 45012 / 100000
+P(E) = 0.45
+```
+
+#### Exercise 4
+
+If E and F were independent, then we would expect P(E|F) to be about the same as P(E). But they're not; PE is 0.45, and P(E|F) is 0.29. So, that tells us that E and F are dependent, the liklyhood of making a purchase and the age group of that person (which we know they are in this example.)
+
+So it makes sense to consider conditional probability! :)
+
+What is P(E)P(F)?
+
+```
+P(E)P(F) = 0.45 x 0.16 = 0.072
+```
+
+#### Exercise 5
+
+P(E,F) is different from P(E|F). P(E,F) would be the probability of both being in your 30's and buying something, out of the total population - not just the population of people in their 30's:
+
+```
+P(E,F) = ?
+```
 
 
 
