@@ -385,6 +385,37 @@ P(A|B) = 22.8%
 
 So, even though P(B|A) is high (99%), the probability of the opposite being true P(A|B) is a lot lower (22.8%). This is mainly due to the fact that such a low number of the population are actually users of the drug in this case.
 
+### Linear Regression
+
+Open up the [Linear Regression Examples](/examples/LinearRegression.ipynb) notebook.
+
+Fitting a straight line to a set of observations. Can then use this line to predict unobserved / new values. Its based on the % slope / gradient of the line + the y intercept (the point at which the line crosses the y-axis).
+
+It works by using something called **least squares** or **ordinarliy squares** or **OLS**. This basically minimizes the error between each point and the line. This results in the formulae: 
+
+```
+y = mx + b
+```
+
+So in probability terms its like maximizing the likiehood of the observed data. Sometimes this might be referred to as **'maximum likelihood estimation'**
+
+**Gradient Decent** is an alternate approach to linear regression. However, gradient decent is more appropriate when dealing with 3D data so usually least squares in the case of simple linear regression is the best option.
+
+#### r-squared
+
+**r-squared** or **coefficient of determination** measures how well the line fits the dataset. Essentially this measures the fraction of the total variation in Y that is captured by the model. So how well does your line follow the variation that is happening.
+
+```
+r-squared = sum of the sqared errors / sum of the squared variation from the mean
+```
+
+The value for r-sauared will range from 0 to 1.
+
+* 0 = your line does not fit at all (so bad!)
+* 1 = your line fits perfectly (so very good!)
+
+
+
 
 
 
