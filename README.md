@@ -339,7 +339,9 @@ P(E|F) = 0.31
 
 Given conditions A & B then Bayes is the probabilty of A occuring given that B occurs and is based on this formulae:
 
+```
 P(A|B) = (P(A) * P(B|A)) / P(B)
+```
 
 The main insight is that the probability of something that depends on B depends very much on the base probability of B and A.
 
@@ -347,33 +349,39 @@ It also means that P(A|B) is NOT the same as P(B|A).
 
 So in a real word case the probability of someone being a drug user given they tested positive for the drug is NOT the same as someone who is a drug user AND testing positive for the drug.
 
-## Bayes' Theorem Drug Testing Example
+#### Bayes' Theorem Drug Testing Example
 
 We have a drug test that can accurately detect the presence or absense of the drug with 99% accuracy.
 
 In this example 0.3% of the population are users of the drug.
 
-Event A = That you are a user of the drug
-Event B = That you tested positivly for the drug
+* Event A = That you are a user of the drug
+* Event B = That you tested positivly for the drug
 
 So we need to calculate P(B). This is the probability of testing positive if you DO use the drug (= 0.99 * 0.003 = 0.00297) PLUS the probability of testing postive if you do NOT use the drug (= 0.01 * 0.997 = 0.00997)
 
 Basically 0.3% use the drug so their test will have a 99% accuracy.
 Then 99.7% do NOT use the drug so their test will produce a false positive 1% of the time.
 
+```
 P(B) = 0.00297 + 0.00997 = 0.01294 = 0.013
+```
 
 So now we have: 
 
+```
 P(A) = 0.003
 P(B) = 0.013
 P(B|A) = 0.99
+```
 
 Therefore, the probability of being a drug user given that you tested positivly for the drug is:
 
+```
 P(A|B) = (P(A) * P(B|A)) / P(B)
 P(A|B) = (0.003 * 0.99) / 0.013
 P(A|B) = 22.8%
+```
 
 So, even though P(B|A) is high (99%), the probability of the opposite being true P(A|B) is a lot lower (22.8%). This is mainly due to the fact that such a low number of the population are actually users of the drug in this case.
 
