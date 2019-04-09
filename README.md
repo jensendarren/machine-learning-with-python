@@ -429,3 +429,15 @@ And so on with higher orders producing more complex curves.
 Don't apply more degrees than you really need to fit your data with a polynomial. Try to visualize your fit. Also use calculate r-squared value and see if that indicates a good fit or not.
 
 There are techniques called train/test that can detect overfitting that will be covered later.
+
+### Multivariate Regression
+
+This is the case where you may have a set of data that relies on more than one variable that influences the data.
+
+For example, predicting the price of a car based on its attributes, like body style, brand, mileage, age, doors etc.
+
+This works by using coefficients for each factor. For example: 
+
+`price = α + β<sub>1</sub>milage + β<sub>2</sub>age + β<sub>3</sub>doors`
+
+In the formulae above each coefficient (β1, β2 etc) indicates how important each factor is (when all normalized). So as the coefficient tends to zero then this indicates that the factor is probably less important to the observation we are trying to predict.
