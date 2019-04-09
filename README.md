@@ -406,7 +406,7 @@ So in probability terms its like maximizing the likiehood of the observed data. 
 **r-squared** or **coefficient of determination** measures how well the line fits the dataset. Essentially this measures the fraction of the total variation in Y that is captured by the model. So how well does your line follow the variation that is happening.
 
 ```
-r-squared = sum of the sqared errors / sum of the squared variation from the mean
+r-squared = sum of the squared errors / sum of the squared variation from the mean
 ```
 
 The value for r-sauared will range from 0 to 1.
@@ -414,9 +414,18 @@ The value for r-sauared will range from 0 to 1.
 * 0 = your line does not fit at all (so bad!)
 * 1 = your line fits perfectly (so very good!)
 
+### Polynomial Regression
 
+Allows for fitting a curved line to a set of observations. So essentially the Linear Regression is actually the first order or first degree polynomial (since the power of X in the equation `y = mx + b` is 1).
 
+Second order polynomial function: `y = ax^2 + bx + c`
 
+Third order polynomial function: `y = ax^3 + bx^2 + cx + d`
 
+And so on with higher orders producing more complex curves.
 
+#### Beware of Overfitting
 
+Don't apply more degrees than you really need to fit your data with a polynomial. Try to visualize your fit. Also use calculate r-squared value and see if that indicates a good fit or not.
+
+There are techniques called train/test that can detect overfitting that will be covered later.
