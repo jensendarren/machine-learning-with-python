@@ -438,6 +438,6 @@ For example, predicting the price of a car based on its attributes, like body st
 
 This works by using coefficients for each factor. For example: 
 
-`price = α + β<sub>1</sub>milage + β<sub>2</sub>age + β<sub>3</sub>doors`
+`price = α + β1>milage + β2age + β3doors`
 
 In the formulae above each coefficient (β1, β2 etc) indicates how important each factor is (when all normalized). So as the coefficient tends to zero then this indicates that the factor is probably less important to the observation we are trying to predict.
