@@ -432,12 +432,14 @@ There are techniques called train/test that can detect overfitting that will be 
 
 ### Multivariate Regression
 
+Open up the [Multivariate Regression Examples](/examples/MultivariateRegression.ipynb) notebook.
+
 This is the case where you may have a set of data that relies on more than one variable that influences the data.
 
 For example, predicting the price of a car based on its attributes, like body style, brand, mileage, age, doors etc.
 
 This works by using coefficients for each factor. For example: 
 
-`price = α + β1>milage + β2age + β3doors`
+`price = α + β1milage + β2age + β3doors`
 
 In the formulae above each coefficient (β1, β2 etc) indicates how important each factor is (when all normalized). So as the coefficient tends to zero then this indicates that the factor is probably less important to the observation we are trying to predict.
