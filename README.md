@@ -443,3 +443,15 @@ This works by using coefficients for each factor. For example:
 `price = α + β1milage + β2age + β3doors`
 
 In the formulae above each coefficient (β1, β2 etc) indicates how important each factor is (when all normalized). So as the coefficient tends to zero then this indicates that the factor is probably less important to the observation we are trying to predict.
+
+### Multi-Level Models
+
+The concept that the thing that you are measuring can be influenced by many factors. For example, the health of your cells is influenced by the health of your organs that contain the cells and the body which the organs are in and the home that you live in and the environment that might affect your stress or the pollution levels of the city,etc,etc. As you can see its possible to go up and up into different levels that can potentially affect the thing that you are measuring.
+
+This is an advanced topic. More details can be found [here](https://en.wikipedia.org/wiki/Multilevel_model).
+
+### Machine Learning with Python
+
+#### Supervised Learning
+
+#### Unsupervised Learning
