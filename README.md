@@ -452,6 +452,53 @@ This is an advanced topic. More details can be found [here](https://en.wikipedia
 
 ### Machine Learning with Python
 
-#### Supervised Learning
+Machine Learning is alorithms that can learn from observational data and make predictions from it.
+
+Two different types of learning as follows:
 
 #### Unsupervised Learning
+
+The model is not provided 'answers' it must make of the data by only observations. Clustering images of objects is a good example. So group by round vs. square objects or blue vs. red objects. The problem is that you don't know how the alorithm will behave and the output that it will produce. 
+
+So why use this approach when there appears to be no real stucture or logic to the exercise? In some cases, unsupervised learnign can produce clustering outputs that were not even anticipated. This is one of the interesting benefits of using unsupervised learning - in the cases where you *don't know what you are looking for in the data set* (latent variables). With unsupervised learning one can 'tease out' these previously unseen clusters in your dataset.
+
+*Examples 1: Dating Website: Characteristics of people who like eachother for dating*
+
+A dating application dataset might have some sterotypes of relations / clusting, however with unsupervised learning one can reveal interesting insights into the behvious of the users of the dating website that were otherwise not so obvious.
+
+*Example 2: IMDB: Movie properties vs. popularity*
+
+Movies have many properties and these might have some indication as to the popularity of the movie. Or they might have some other interesting clustering characteristic that is acatully very useful and interesting. 
+
+*Example 3: Product Descriptions vs. Prodcut Category*
+
+Every product has a description. What terms in a description have an influence on the actual product category? Some are obvious and some will be latent so we use unsupervised learning to find these out.
+
+#### Supervised Learning
+
+Where we have dataset that we can feed into the model with the actual answers so that the model can 'learn' and improve.
+
+So we have a set of data (e.g. car prices) that has a set of properties (milage, year, make, cylinders, doors, price) and we can train the model to predict the price of the car given a set of input parameters.
+
+#### Train / Test
+
+We use train / test approach to determine how good a model is.
+
+Spilt the data 80/20 into the train / test set of data and use that accordingly.
+
+One can measure the model's accuracy (using r-squared) by asking it to predict the values for the test set and compare that to the known true values.
+
+For this to work best you need:
+
+* A large enough dataset
+* Select the dataset ramdomly
+* This approach also helps to prevent overfitting
+
+But sometimes this approach may not work but it can be controlled with ensuring the dataset is large and that the selection of the train/test sets is truely random.
+
+One way to protect against overfitting is to use K-fold Cross Validation. This approch is basically to take multiple train sets of data and test each one of these against the *same* test slice of data.
+
+* So may be you have a one large dataset and split that again into K randomly assigned segments, say 4. 
+* Reserve one set as your testing set.
+* Then you will run the training on all the remaining sets.
+* Take the average of the K1 r-squared scores
