@@ -502,3 +502,27 @@ One way to protect against overfitting is to use K-fold Cross Validation. This a
 * Reserve one set as your testing set.
 * Then you will run the training on all the remaining sets.
 * Take the average of the K1 r-squared scores
+
+#### Bayesian Methods for detecting email Spam
+
+Lets assume that it is likely that an email that contains the word 'free' is actually going yo be Spam. So that is the probability of the email being Spam given that it contains the word 'free' so `P(Spam|Free)`.
+
+```
+P(Spam|Free) = (P(Free|Spam)P(Spam)) / P(Free)
+```
+
+To calculate the P(Free) - the email simply containing the word 'free' is:
+
+```
+P(Free) = (P(Free|Spam)P(Spam)) + (P(Free|Not Spam)P(Not Spam))
+```
+
+*What about all other words?*
+
+The above formula will only work with emails that contain the word 'free' but what about all the other words in the English language?
+
+We can use *Naive Bayes* as follows:
+
+Well what we can do is generate a `P(Word|Spam)` value for _every_ word in the English language during the training process (eliminating noise words like 'the', 'and', 'it', etc, etc). Then we would analyse the entire text of an email and run it though the formula and multiply the P values together to create an overall probability that an email being Spam.
+
+This approach assumes the presence of different words is independant of each other.
