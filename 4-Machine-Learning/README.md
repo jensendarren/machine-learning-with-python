@@ -77,7 +77,7 @@ This approach assumes the presence of different words is independant of each oth
 
 *Use Scikit Learn to make this easier*
 
-Open up the [Naive Bayes Examples](/examples/NaiveBayes.ipynb notebook.
+Open up the [Naive Bayes Examples](/examples/NaiveBayes.ipynb) notebook.
 
 The approach is fairly simple as follows:
 
