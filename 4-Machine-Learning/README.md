@@ -86,3 +86,22 @@ The approach is fairly simple as follows:
 * We then use `MultinomialNB` to do the heavy lifting for Naive Bayes calculations.
 
 * We then train this on known sets of 'Spam' and 'Ham' emails (so this is basically an example of Supervised Learning).
+
+Some of the code in the example:
+
+```
+vectorizer = CountVectorizer()
+counts = vectorizer.fit_transform(data['message'].values) #Basically tokenizes the message to represent the number of times a word appears in the message. Splits each message into a set of words and the number of times each word appears. It actually converts the word into a number too btw!
+
+classifier = MultinomialNB()
+targets = data['class'].values
+classifier.fit(counts, targets) #Creates the Naive Bayes model from the dataset
+```
+...and to test the classifier as follows
+
+```
+examples = ['Free Viagra now!!!', 'Lets play golf tomorrow?!']
+example_counts = vectorizer.transform(examples) #Convert these test messages into the same format that we trained the model on.
+predictions = classifier.predict(example_counts) #Ask the classifier which is spam and which is ham!
+predictions
+```
