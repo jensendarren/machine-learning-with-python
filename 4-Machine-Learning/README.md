@@ -105,3 +105,32 @@ example_counts = vectorizer.transform(examples) #Convert these test messages int
 predictions = classifier.predict(example_counts) #Ask the classifier which is spam and which is ham!
 predictions
 ```
+
+#### K-Means Clustering
+
+Open up the [KMeans Clustering Examples](/examples/KMeans.ipynb) notebook.
+
+An unsupervised technique where we can take an amount of data and process it to find meaningful clusters in that data.
+
+We split the data into K groups that are centered or groupd around around K centroids. Its unsuperviesed since this approach only uses the positions of the data points themselves and can sometimes find categories in your dataset that you did not even know would be there!
+
+*K-Means Clustering approach*
+
+Here is a basic guideline of the typical approach:
+
+* Randomly pick K centroids (k-means)
+* Assign each datapoint to the centroid its closed to
+* Recompute the centroids based on the average position of each centroid's points
+* Iterate until the points stop changing assignment to centroids
+
+After that you can predict the cluster a new point belogs to by finding the centroid that new point is closed to.
+
+Choosing the value for K is not so easy, however, the best approch is to choose a low value and keep increasing until you stop getting large reduction in squared errors. So if you see when you increase the value of K that the squared distances of the points to the centroids does not change to much then you probably have reached your limit of K at that point.
+
+*Watch out Local Minima!*
+
+You should also be aware of needing to avoid local minima. This means that the first low value of K that you select (or maybe near to that first value) yields a seemly good result set whereas in fact this is a localized discovery in the clustering of the data and it would therefore be well worth trying K at higher values to see if it yeilds anything different at these higher numbers.
+
+*Labling the clusters*
+
+This is something that only you can do! K-Means Clustering does not provide the solution to naming the clusters of data that it has found for you!
