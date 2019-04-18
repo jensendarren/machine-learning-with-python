@@ -4,25 +4,25 @@ Machine Learning is alorithms that can learn from observational data and make pr
 
 Two different types of learning as follows:
 
-#### Unsupervised Learning
+### Unsupervised Learning
 
 The model is not provided 'answers' it must make of the data by only observations. Clustering images of objects is a good example. So group by round vs. square objects or blue vs. red objects. The problem is that you don't know how the alorithm will behave and the output that it will produce. 
 
 So why use this approach when there appears to be no real stucture or logic to the exercise? In some cases, unsupervised learnign can produce clustering outputs that were not even anticipated. This is one of the interesting benefits of using unsupervised learning - in the cases where you *don't know what you are looking for in the data set* (latent variables). With unsupervised learning one can 'tease out' these previously unseen clusters in your dataset.
 
-*Examples 1: Dating Website: Characteristics of people who like eachother for dating*
+#### Examples 1: Dating Website: Characteristics of people who like eachother for dating
 
 A dating application dataset might have some sterotypes of relations / clusting, however with unsupervised learning one can reveal interesting insights into the behvious of the users of the dating website that were otherwise not so obvious.
 
-*Example 2: IMDB: Movie properties vs. popularity*
+#### Example 2: IMDB: Movie properties vs. popularity
 
 Movies have many properties and these might have some indication as to the popularity of the movie. Or they might have some other interesting clustering characteristic that is acatully very useful and interesting. 
 
-*Example 3: Product Descriptions vs. Prodcut Category*
+#### Example 3: Product Descriptions vs. Prodcut Category
 
 Every product has a description. What terms in a description have an influence on the actual product category? Some are obvious and some will be latent so we use unsupervised learning to find these out.
 
-#### Supervised Learning
+### Supervised Learning
 
 Where we have dataset that we can feed into the model with the actual answers so that the model can 'learn' and improve.
 
@@ -51,7 +51,7 @@ One way to protect against overfitting is to use K-fold Cross Validation. This a
 * Then you will run the training on all the remaining sets.
 * Take the average of the K1 r-squared scores
 
-#### Bayesian Methods for detecting email Spam
+### Bayesian Methods for detecting email Spam
 
 Lets assume that it is likely that an email that contains the word 'free' is actually going yo be Spam. So that is the probability of the email being Spam given that it contains the word 'free' so `P(Spam|Free)`.
 
@@ -65,7 +65,7 @@ To calculate the P(Free) - the email simply containing the word 'free' is:
 P(Free) = (P(Free|Spam)P(Spam)) + (P(Free|Not Spam)P(Not Spam))
 ```
 
-*What about all other words?*
+#### What about all other words?
 
 The above formula will only work with emails that contain the word 'free' but what about all the other words in the English language?
 
@@ -75,7 +75,7 @@ Well what we can do is generate a `P(Word|Spam)` value for _every_ word in the E
 
 This approach assumes the presence of different words is independant of each other.
 
-*Use Scikit Learn to make this easier*
+#### Use Scikit Learn to make this easier
 
 Open up the [Naive Bayes Examples](/examples/NaiveBayes.ipynb) notebook.
 
@@ -106,7 +106,7 @@ predictions = classifier.predict(example_counts) #Ask the classifier which is sp
 predictions
 ```
 
-#### K-Means Clustering
+### K-Means Clustering
 
 Open up the [KMeans Clustering Examples](/examples/KMeans.ipynb) notebook.
 
@@ -114,7 +114,7 @@ An unsupervised technique where we can take an amount of data and process it to 
 
 We split the data into K groups that are centered or groupd around around K centroids. Its unsuperviesed since this approach only uses the positions of the data points themselves and can sometimes find categories in your dataset that you did not even know would be there!
 
-*K-Means Clustering approach*
+#### K-Means Clustering approach
 
 Here is a basic guideline of the typical approach:
 
@@ -127,10 +127,10 @@ After that you can predict the cluster a new point belogs to by finding the cent
 
 Choosing the value for K is not so easy, however, the best approch is to choose a low value and keep increasing until you stop getting large reduction in squared errors. So if you see when you increase the value of K that the squared distances of the points to the centroids does not change to much then you probably have reached your limit of K at that point.
 
-*Watch out Local Minima!*
+#### Watch out Local Minima!
 
 You should also be aware of needing to avoid local minima. This means that the first low value of K that you select (or maybe near to that first value) yields a seemly good result set whereas in fact this is a localized discovery in the clustering of the data and it would therefore be well worth trying K at higher values to see if it yeilds anything different at these higher numbers.
 
-*Labling the clusters*
+#### Labling the clusters
 
 This is something that only you can do! K-Means Clustering does not provide the solution to naming the clusters of data that it has found for you!
