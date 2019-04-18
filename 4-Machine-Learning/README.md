@@ -10,7 +10,7 @@ The model is not provided 'answers' it must make of the data by only observation
 
 So why use this approach when there appears to be no real stucture or logic to the exercise? In some cases, unsupervised learnign can produce clustering outputs that were not even anticipated. This is one of the interesting benefits of using unsupervised learning - in the cases where you *don't know what you are looking for in the data set* (latent variables). With unsupervised learning one can 'tease out' these previously unseen clusters in your dataset.
 
-#### Examples 1: Dating Website: Characteristics of people who like eachother for dating
+#### Example 1: Dating Website: Characteristics of people who like eachother for dating
 
 A dating application dataset might have some sterotypes of relations / clusting, however with unsupervised learning one can reveal interesting insights into the behvious of the users of the dating website that were otherwise not so obvious.
 
@@ -129,8 +129,21 @@ Choosing the value for K is not so easy, however, the best approch is to choose 
 
 #### Watch out Local Minima!
 
-You should also be aware of needing to avoid local minima. This means that the first low value of K that you select (or maybe near to that first value) yields a seemly good result set whereas in fact this is a localized discovery in the clustering of the data and it would therefore be well worth trying K at higher values to see if it yeilds anything different at these higher numbers.
+You should also be aware of needing to avoid local minima. This means that the first low value of K that you select (or maybe near to that first value) yields a seemly good result set whereas in fact this is a localized discovery in the clustering of the data and it would therefore be well worth trying K at higher values to see if it yields anything different at these higher numbers.
 
 #### Labling the clusters
 
 This is something that only you can do! K-Means Clustering does not provide the solution to naming the clusters of data that it has found for you!
+
+#### Python example
+
+Below is the main part of KMeans clustering in Python - just two lines of code!
+
+```
+# Create a KMeans model with N clusters
+model = KMeans(n_clusters=4)
+
+# ... and ask the model to 'fit' the data into it! Very simple
+# Note we scaling the data to normalize it! Important for good results.
+model = model.fit(scale(data))
+```
