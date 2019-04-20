@@ -186,4 +186,37 @@ Basically, at each step in the tree, find the attribute that we can use to parti
 
 So in our CV example (above), the first step that comes out of the decision tree is if the candidate had an internship or not. This became the first decision in our tree because the next step after that contains a data set that has the least entropy out of all the other decisions.
 
+Constructing a decision tree is all about finding attribute that returns the highest information gain (i.e., the most homogeneous branches).
+
+The name of the algorithm that is used for generating Decision Tress is [ID3](https://medium.com/machine-learning-guy/an-introduction-to-decision-tree-learning-id3-algorithm-54c74eb2ad55).
+
 Here is an article that [Explaines Decision Trees Easily](https://medium.com/@chiragsehra42/decision-trees-explained-easily-28f23241248) *but perhaps also goes into a little more detail!*
+
+#### Random Forests
+
+An issue with decision trees can be overfitting. Since the data set used for training works well only what that data set, it may not work so well with new data.
+
+A solution is to use the Random Forest approach. This is where we create several decision trees from random subsets of the data and then have each tree 'vote' on the final decison based on the decisions from all the trees in the forest!
+
+This approach is basically randomly re-sampling the input data for each tree. The term for this is *bootstrap aggregating* or *bagging*. We can also ramdomize a subset of the attributes each step is allowed to choose from. This results in more variation between tree to tree.
+
+#### Decision Trees Exercise 
+
+Open up the [Decision Trees Examples](/examples/DecisionTree.ipynb) notebook.
+
+To read the output we have:
+
+**Condition <= 0.5** (e.g. Employed? <=0.5): So if the **not employed** then follow the **left** path and if **are employed** then follow the **right** path. 
+
+Now there can be some confusion becuase the data for Employed is 0 (FALSE) and 1 (TRUE) but the condition <= 0.5 when the value is 0 results in **true** (LOL!). So the decision trees always work by stating a true outcome to the condition statement means moving down the right path (even if, as in this case the actual answer to the question (Employed?) is **false**).
+
+So each condition branches:
+
+* Go left for *"true"*
+* Go right for *"false"*
+
+The **gini** score is a measure of entropy at each step.
+
+The **samples** is the number of points that are being considered at this step that have not yet been sectioned off by a previous decision.
+
+The **value** in the leaves is an indicator of [*not hired*, *hired*] outcome for that *sample*.
