@@ -147,3 +147,43 @@ model = KMeans(n_clusters=4)
 # Note we scaling the data to normalize it! Important for good results.
 model = model.fit(scale(data))
 ```
+
+### Entropy
+
+A measure of the datasets disorder - how same or different it is.
+
+A low entropy tending towards 0 indicates that all the classes of the data are the same (homogeneous).
+
+A high entroy indicates that the data classes are somewhat different.
+
+### Decision Trees
+
+A decision tree is a flowchart to help make decisions. We have a dependant variable like if we should play outside or not based on the weather. A decision tree is good choice since there are many parameters that influence the decision. A decision tree looks at all of the weather attributes such as sunny, cloudy, rainy etc.
+
+Supervised learning can help generate the decision tree since we can feel a ML model with that data which contains all the weather paramerters and with the classification result - play outside or play inside?
+
+#### Decision Tree Example
+
+Lets say we are running a tech company and we need to hire. We can create a decision tree based on the content of the CVs of our current team so that we can predict the likelihood that a new applicant will be hired based on the content of their submitted CV.
+
+The way we would do this is to create a table of interesting attributes that we feel contribute to the decision to hire that candidate. This could be: number of years experience, currently employed, number of previous employers etc, etc.
+
+The resulting Decision Tree looks like this:
+
+- **Did an intership?**
+- Yes: Hire!
+- No: **Currently Employed?**
+    - Yes: Hire!
+    - No: **< 1 prior employeer?**
+        - Yes: DONT Hire!
+        - No: **Attended a Top Tier School**
+            - No: DONT Hire!
+            - Yes: Hire!
+
+#### How Decision Trees works.
+
+Basically, at each step in the tree, find the attribute that we can use to partition the data set to minimizes the entropy of the data in the next step. So it produces the most efficient approach of making decisions since the entropy of the data is cleared out early on in the decision making process.
+
+So in our CV example (above), the first step that comes out of the decision tree is if the candidate had an internship or not. This became the first decision in our tree because the next step after that contains a data set that has the least entropy out of all the other decisions.
+
+Here is an article that [Explaines Decision Trees Easily](https://medium.com/@chiragsehra42/decision-trees-explained-easily-28f23241248) *but perhaps also goes into a little more detail!*
