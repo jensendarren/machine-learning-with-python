@@ -220,3 +220,21 @@ The **gini** score is a measure of entropy at each step.
 The **samples** is the number of points that are being considered at this step that have not yet been sectioned off by a previous decision.
 
 The **value** in the leaves is an indicator of [*not hired*, *hired*] outcome for that *sample*.
+
+#### Ensemble Learning
+
+Is where we combine multiple models together to make an overall prediction. Random Forests covered previously was an example of ensemble learning and so is K-means when we use several iterations of K to get the final output.
+
+So its basically using multiple models to try and solve the same problem and let the models vote on the results.
+
+Differnt types of basic ensemble learning are:
+
+* **Bagging** Random Forest approach usese *bagging*. This is where many models are built on a randomly drawn from the subset of data.
+
+* **Boosting** Is where each subsequent model in the ensemble boosts attributes that addresses data mis-classified in the previous iteration. So you build your model, you identify the weak points and then re-train by focusing (i.e. *boosting*) the attention of the training process on the attributes that were mis-classified in the previous iteration.
+
+* **Bucket of Models** Using multiple different techniques and algorithms combined to generate new models. Analyse the results of each technique by testing the model and *pick the ONE model that works best*.
+
+* **Stacking** Is similar to the *Bucket of Models* approach except in this case we **combine the results** of the all the models output together.
+
+**NOTE:** There are more advanced techniques such as [Bayes Optimal Classifier](https://svivek.com/teaching/machine-learning/fall2018/slides/prob-learning/bayes-optimal-classifier.pdf), [Bayesian Parameter Averaging](https://www.coursera.org/lecture/bayesian/bayesian-model-averaging-adz4Y) & [Bayesian Model Combination](https://stats.stackexchange.com/questions/224015/how-to-implement-bayesian-model-combination) but these are mostly theroetical, computationally difficult to achive and mostly misunderstood so its better to use one of the simpler approaches listed above for ensemble learning.
