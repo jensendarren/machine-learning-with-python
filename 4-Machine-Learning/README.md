@@ -238,3 +238,25 @@ Differnt types of basic ensemble learning are:
 * **Stacking** Is similar to the *Bucket of Models* approach except in this case we **combine the results** of the all the models output together.
 
 **NOTE:** There are more advanced techniques such as [Bayes Optimal Classifier](https://svivek.com/teaching/machine-learning/fall2018/slides/prob-learning/bayes-optimal-classifier.pdf), [Bayesian Parameter Averaging](https://www.coursera.org/lecture/bayesian/bayesian-model-averaging-adz4Y) & [Bayesian Model Combination](https://stats.stackexchange.com/questions/224015/how-to-implement-bayesian-model-combination) but these are mostly theroetical, computationally difficult to achive and mostly misunderstood so its better to use one of the simpler approaches listed above for ensemble learning.
+
+#### Support Vector Machines (SVM) 
+
+Clustering higher dementional data (i.e. data that has lots of different features). So if you a data set with multiple features that you want to predict with then SVM might be a good choice to help!
+
+The approach finds higher-dimentional support vectors accross which to divide the data that define *hyperplanes* and is a supervised leaning technique.
+
+**Kernel Trick** the kernel trick represents data in higher dimensional spaces to find hyperplanes that might not be apparent in lower dimensions. There are a variety of kernels that can be used that have various levels of computational cost depending on the problem and data set being used.
+
+### SVM Example: Support Vector Classification
+
+In practice you will use Support Vector Classification to classify data using Support Vector Machines.
+
+As mentioned above, there are several 'kerels' that can be used with SVC and some will work better than others for a given data set.
+
+Some examples of kernels that are available to use are:
+
+* Linear Kernel
+* RBF Kernel
+* Polynomial (Degree N) Kernel
+
+In the *Polynomial* example you can choose the value of N. Can also try ensemble learning as well.
