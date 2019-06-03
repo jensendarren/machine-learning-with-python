@@ -302,4 +302,6 @@ There are other ways to do this, of course.
 
 ### Example using the Movielense data
 
-Open up the [Naive Bayes Examples](/examples/SimilarMovies.ipynb) notebook and explore in there. Many useful tips and usage examples of the [Pandas](https://pandas.pydata.org/) library!
+Open up the [Similar Movies Examples](/examples/SimilarMovies.ipynb) notebook and explore in there. Many useful tips and usage examples of the [Pandas](https://pandas.pydata.org/) library!
+
+Finally, checkout the [Item Based CF](/examples/ItemBasedCF.ipynb) notebook and explore in there. In this example, you will discover even more amazing power of Pandas! For example, Pandas has a built-in `corr()` method that will compute a correlation score for every column pair in the matrix! This gives us a correlation score between every pair of movies.
