@@ -299,3 +299,7 @@ The way this works is:
 So for example, take two films e.g. Star Wars and Empire Strikes Back, find people who watched both of these films, compare the rating that these people gave these films and if they are very similar then the movies must also be similar (in this example category).
 
 There are other ways to do this, of course.
+
+### Example using the Movielense data
+
+Open up the [Naive Bayes Examples](/examples/SimilarMovies.ipynb) notebook and explore in there. Many useful tips and usage examples of the [Pandas](https://pandas.pydata.org/) library!
