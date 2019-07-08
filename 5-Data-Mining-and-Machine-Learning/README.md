@@ -91,3 +91,27 @@ for neighbor in neighbors:
     avgRating += movieDict[neighbor][3]
     print (movieDict[neighbor][0] + " " + str(movieDict[neighbor][3]))
 ```
+
+## Curse of dimensionality
+
+Many problems have several dimensions of data. For example the movie data set has many movies (100s in fact) so its said to have 100s of dimensiions of data. So every single movie can be tought of as a dimension in that data space.
+
+Alterively you may have a dataset with many different features. For example the [iris flower dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) contains 4 features for each flower. So in this case there are multi-demensions: 100s of flowers each with 4 features: that's a lot of dimensions and difficult to wrap our heads around! The iris data set is included in sci-kit learn.
+
+So a process called *dimensionality reduction* helps to distill higher-dimentional data down to a smaller number of dimensions while preserving the variance of the database. Similar approach might be used for compressing images. If you imagine that a black and while image is just a 2x2 grid of numbers between 0 and 1 (to represenent the brightness of each pixel) - X position, Y position, and brightness at each point. Then if this can be compressed into a smaller set, while preseriving that varience of brightness we can still represent the same image, more or less, when uncompressed.
+
+An example of dimensionality reduction is K-means clustering (we covered earlier in the course). There is another (more sophisticated!) way, of course, and that technique is called:
+
+### Principal Compnent Analysis
+
+The approche finds higher dimensional planes in which to project the dataset onto while still preserving the variance in the data. A popular implementation of this is Singular Value Decomposition (SVD)
+
+### Example: Visualizing 4-D Iris Flower Data
+
+The 4 dimensions are: length and width of petals and sepals. We also know the subspecies classification of each flower.
+
+Using PCA we can visualize this dataset in 2 dimensions, instead of 4, while preserving the varians.
+
+Open up the [PCA.ipynb](/examples/PCA.ipynb) file and dig in!
+
+In the exerciese we reduce the 4 dimensions down to just 2. You can see the three different types of Iris are still clustered pretty well. If you think about it, this probably works well because the overall size of an individual flower probably makes both the petal and sepal sizes increase by a similar amount. 
