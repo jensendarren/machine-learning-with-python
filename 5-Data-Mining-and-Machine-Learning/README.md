@@ -102,9 +102,9 @@ So a process called *dimensionality reduction* helps to distill higher-dimention
 
 An example of dimensionality reduction is K-means clustering (we covered earlier in the course). There is another (more sophisticated!) way, of course, and that technique is called:
 
-### Principal Compnent Analysis
+## Principal Compnent Analysis
 
-The approche finds higher dimensional planes in which to project the dataset onto while still preserving the variance in the data. A popular implementation of this is Singular Value Decomposition (SVD)
+The approch finds higher dimensional planes in which to project the dataset onto while still preserving the variance in the data. A popular implementation of this is Singular Value Decomposition (SVD)
 
 ### Example: Visualizing 4-D Iris Flower Data
 
@@ -115,3 +115,36 @@ Using PCA we can visualize this dataset in 2 dimensions, instead of 4, while pre
 Open up the [PCA.ipynb](/examples/PCA.ipynb) file and dig in!
 
 In the exerciese we reduce the 4 dimensions down to just 2. You can see the three different types of Iris are still clustered pretty well. If you think about it, this probably works well because the overall size of an individual flower probably makes both the petal and sepal sizes increase by a similar amount. 
+
+## Reinforcement Learning
+
+Where we have an 'agent' that needs to explore an environment of sorts and as it travels around this environment the agent learns the value of different states in different conditions. A good academic example to apply this would be in a Pac Man game where Pac Man is the agent and the space is everything else - the maze, the ghosts, the fruit etc.
+
+### Q-Learning 
+
+A specific implementation of Reinforement Learning. This can also be refered to as Markov Decision Processes (MDPs) and is a _discrete time stochstic control process_. Reinforement Learning is also a form of _Dynamic Programming_.
+
+This involves having:
+
+* A set of environmental states *s*
+* A set of possible actions in each state *a* (in Pac Man that are the possible moves up, down, left right)
+* A set state/action pair *Q* (in Pac Man each state will have all the possible actions *a* and we assign a value *Q* to _each_ action for _each_ state.)
+
+The value of Q starts of as 0 and as the agent explores the space, when a positive (good/rewarding) event occurs then _increase_ Q and when a negative (bad/unrewarding) event occurs then _decrease_ Q.
+
+When using this approach we can obviously calculate Q for each current state. Again if something positive happpens for that action (like eating a 'power pill') then the value of Q can _increase_ and if its a negative event (like being killed by a ghost) then the value of Q can _decreate_.
+
+It's also possible to 'look ahead' more than one step by using a discount factor when computing Q, like so:
+
+Q(s,a) += discount * (reward(s,a) + max(Q(s')) - Q(s,a))
+
+There is a challenge when exploring the environment. How most efficiently to do that?
+
+**Simple Approach** - always choose the action for the given state with the highest Q. If there is a tie then choose at random. However, its inefficient and we could miss a lot of paths!
+
+**Better Approach** - introduce a little randomness known as an _epsilon term_. Basically, if a random number is less than epsilon then **don't** follow Q, but instead choose a random path. That way, exploration never totally stops. However, choosing a value fo epsilon can be tricky.
+
+Further exploration: 
+
+https://pymdptoolbox.readthedocs.io/en/latest/api/mdptoolbox.html
+https://inst.eecs.berkeley.edu/~cs188/sp12/projects/reinforcement/reinforcement.html
