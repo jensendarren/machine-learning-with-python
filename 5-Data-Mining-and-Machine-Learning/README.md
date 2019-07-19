@@ -102,7 +102,7 @@ So a process called *dimensionality reduction* helps to distill higher-dimention
 
 An example of dimensionality reduction is K-means clustering (we covered earlier in the course). There is another (more sophisticated!) way, of course, and that technique is called:
 
-## Principal Compnent Analysis
+## Principal Component Analysis
 
 The approch finds higher dimensional planes in which to project the dataset onto while still preserving the variance in the data. A popular implementation of this is Singular Value Decomposition (SVD)
 
