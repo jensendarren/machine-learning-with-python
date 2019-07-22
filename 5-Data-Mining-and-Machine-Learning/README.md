@@ -75,7 +75,7 @@ def getNeighbors(movieID, K):
             dist = ComputeDistance(movieDict[movieID], movieDict[movie])
             distances.append((movie, dist))
     # sort by dist column
-    # https://stackoverflow.com/questions/18595686/how-does-operator-itemgetter-and-sort-work-in-python        
+    # https://stackoverflow.com/questions/18595686/how-does-operator-itemgetter-and-sort-work-in-python
     distances.sort(key=operator.itemgetter(1))
     neighbors = []
     # Simply get the K nearest neighbors from the distances array (since its sorted already)
@@ -114,4 +114,7 @@ Using PCA we can visualize this dataset in 2 dimensions, instead of 4, while pre
 
 Open up the [PCA.ipynb](/examples/PCA.ipynb) file and dig in!
 
-In the exerciese we reduce the 4 dimensions down to just 2. You can see the three different types of Iris are still clustered pretty well. If you think about it, this probably works well because the overall size of an individual flower probably makes both the petal and sepal sizes increase by a similar amount. 
+In the exerciese we reduce the 4 dimensions down to just 2. You can see the three different types of Iris are still clustered pretty well. If you think about it, this probably works well because the overall size of an individual flower probably makes both the petal and sepal sizes increase by a similar amount.
+
+## Data Warehousing
+

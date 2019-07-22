@@ -30,9 +30,10 @@ iPython Notebook files are files with the `.ipynb` extension. There are several 
 
 Now practice some Python 101 exercises by opening the file `python101.ipynb`.
 
-# Course Outline and Notes
+# Course Contents
 
-## [Python Basics](/1-Python-Basics/)
-## [Statistics Refresher](/2-Statistics-Refresher/)
-## [Predictive Models](/3-Predictive-Models/)
-## [Machine Learning](/4-Machine-Learning/)
+1. [Python Basics](/1-Python-Basics/)
+1. [Statistics Refresher](/2-Statistics-Refresher/)
+1. [Predictive Models](/3-Predictive-Models/)
+1. [Machine Learning](/4-Machine-Learning/)
+1. [Data Mining and Machine Learning](/5-Data-Mining-and-Machine-Learning/)
