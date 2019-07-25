@@ -36,4 +36,6 @@ Now practice some Python 101 exercises by opening the file `python101.ipynb`.
 1. [Statistics Refresher](/2-Statistics-Refresher/)
 1. [Predictive Models](/3-Predictive-Models/)
 1. [Machine Learning](/4-Machine-Learning/)
-1. [Data Mining and Machine Learning](/5-Data-Mining-and-Machine-Learning/)
+1. [Recommender Systems](/5-Recommender-Systems/)
+1. [Data Mining and Machine Learning](/6-Data-Mining-and-Machine-Learning/)
+1. [Dealing with Real World Data](/7-Dealing-with-Real-World-Data/)
