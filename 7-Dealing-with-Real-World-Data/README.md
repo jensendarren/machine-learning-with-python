@@ -45,4 +45,4 @@ This approach helps to reduce overfitting to a single train/test split.
 
 ## K-Fold Cross Validation Example
 
-Open the [K-Fold Cross Validation Jpyter Notebook](/examples/KFoldCrossValidation.ipynb) and have a play around!
+Open the [K-Fold Cross Validation Jupyter Notebook](/examples/KFoldCrossValidation.ipynb) and have a play around!
