@@ -85,6 +85,7 @@ def draw_board(board):
 screen = pygame.display.set_mode(size)
 draw_board(board)
 pygame.display.update()
+myfont = pygame.font.SysFont("monospace", 75)
 
 while not game_over:
     for event in pygame.event.get():
@@ -112,7 +113,7 @@ while not game_over:
 
                 if winning_move(board, player):
                     game_over = True
-                    print('Congrats! Player {} Wins!'.format(player))
+                    label = myfont.render("Player 2 wins!!", 1, YELLOW)
             else:
                 posx = event.pos[0]
                 col = int(math.floor(posx/SQUARESIZE))
@@ -124,10 +125,13 @@ while not game_over:
 
                 if winning_move(board, player):
                     game_over = True
-                    print('Congrats! Player {} Wins!'.format(player))
+                    label = myfont.render("Player 2 wins!!", 1, YELLOW)
 
             turn += 1
             turn = turn % 2
 
             print_board()
             draw_board(board)
+
+            if game_over:
+                pygame.time.wait(3000)
