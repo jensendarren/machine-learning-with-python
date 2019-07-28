@@ -108,7 +108,7 @@ txtlines = sc.textFile("file:///spark/README.md")
 # Since we are using Python, we can view the object like so:
 vars(txtlines)
 
-# Note that in production systems you will load data from [HDFS](https://www.ibm.com/analytics/hadoop/hdfs)
+# Note that in production systems you will load data from a Hadoop Distributed File System (HDFS)
 txtlines = sc.textFile("hdfs:///some-distributed-place/a-data-file.csv")
 
 # Connect to a Hive DB (if you have one!) and run SQL query to create RDD
@@ -116,4 +116,44 @@ hiveCtx = HiveContext(sc)
 rows = hiveCtx.sql("SELECT name, age FROM users")
 ```
 
-So any database that supports `JDBC` can communicate via the Spark Context as well as `Elasticsearch`, `Cassandra`, `HBase` etc...
+So any database that supports `JDBC` can communicate via the Spark Context as well as `Elasticsearch`, `Cassandra`, `HBase`, [HDFS](https://www.ibm.com/analytics/hadoop/hdfs) etc...
+
+### RDD Transformations
+
+To transform and RDD we take each row and _transform_ it into some new value based on some function that you will provice. You can chain the results of severl transformations together. So you could call a `map` function and the output creates a new RDD that is fed into another `map` function and so on.
+
+The most common transform fucntions in Spark are `map`, `flatmap`. The difference is that `map` produces one row output for each row input. Whereas `flatmap` can be used to produce multilpe rows for every single row. So in essence you can end up with the result dataset being a _larger_ or _smaller_ RDD then the one started with as input.
+
+Other transform methods availabe are:
+
+* **filter** - essentially a boolean function to determine if a row is preserved or not (discarded)
+* **distinct** - return only distinct values from the RDD
+* **sample** - takes a random sample from the RDD
+* **union, intersection, subtract and cartesian** - standard intersection transforms
+
+#### Examples of using transform methods
+
+See below code snippet:
+
+```
+nums = sc.parallelize([1,2,3,4])
+res = nums.map(lambda x: x*x)
+res.foreach(print)
+
+```
+
+### RDD Actions
+
+There are several actions that can be applied to RDDs:
+
+
+```
+# Given an RDD of numbers...
+nums = sc.parallelize([1,2,3,4])
+
+nums.collect()
+nums.count()
+nums.countByValue()
+nums.take(4)
+nums.top(4)
+```
