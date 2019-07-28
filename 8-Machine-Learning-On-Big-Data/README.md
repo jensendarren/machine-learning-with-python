@@ -23,7 +23,7 @@ Then, inside the container shell session start up `pyspark` by the following com
 ```
 cd spark
 ./bin/pyspark
-``
+```
 
 In the `pyspark` session try the 'hello world' sanity check to see that things are ready for proceeding wiht the remaining exercises:
 
