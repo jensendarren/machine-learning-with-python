@@ -76,3 +76,44 @@ A brief descrioption of each layer:
 * **Spark Streaming** Allows data to be streamed in and processed in real time into a Spark cluster. For example realtme logs from a web server.
 * **MLlib** A Machine Learning component that interfaces with Spark specifically for working with large datasets.
 * **Graph X** For dealing with graph data for example to represent a social network.
+
+## Resilient Distributed Datasets (RDDs)
+
+So what does this mean?
+
+* **Resilient** - means that if the data is loaded into a node within a cluster that crashes / terminates / is unhealthy or whatever, then Spark can recover that data - no data is lost :). Spark will also handle unstable clusters, unstable networks, unstable resources etc and keep retrying (its best) to complete the job. BUT it will only try a certain number of time and there are obviously some limitations. For example, if you don't have enough resources for the job to run then it will still, eventually, fail.
+* **Distributed** - means that the data can be easily distributed accross culsters and reassembled back into a single dataset once processing is complete
+* **Dataset** - well, just means exactly that - it is a structed dataset of rows and columns.
+
+## Spark Context Object
+
+The _Spark Context Object_ is what provides the RDDs and is responsible for making the RDDs both resilient and distributed.
+
+When using the `Spark shell` then you will have availabel an `sc` object as shown in the example above where we read the lines of a local README file.
+
+### RDD Examples
+
+Below are some examples to try:
+
+```
+# Create an RDD from data loaded in RAM
+nums = sc.parallelize([1,2,3,4])
+
+# Read lines from a local file on disk to create an RDD
+txtlines = sc.textFile("README.md")
+
+# Read lines from a remote or different directory on disk to create an RDD
+txtlines = sc.textFile("file:///spark/README.md")
+
+# Since we are using Python, we can view the object like so:
+vars(txtlines)
+
+# Note that in production systems you will load data from [HDFS](https://www.ibm.com/analytics/hadoop/hdfs)
+txtlines = sc.textFile("hdfs:///some-distributed-place/a-data-file.csv")
+
+# Connect to a Hive DB (if you have one!) and run SQL query to create RDD
+hiveCtx = HiveContext(sc)
+rows = hiveCtx.sql("SELECT name, age FROM users")
+```
+
+So any database that supports `JDBC` can communicate via the Spark Context as well as `Elasticsearch`, `Cassandra`, `HBase` etc...
