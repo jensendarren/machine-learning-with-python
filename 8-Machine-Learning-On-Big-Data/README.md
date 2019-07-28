@@ -35,6 +35,7 @@ rdd.count()
 ## Introduction to Apache Spark
 
 ![Spark Platform](./spark-platform.png "Spark Platform")
+
 **Figure showing the layers on the Spark Platform**
 
 The official website defines Spark as being a _fast and general engine for large-scale data processing_. Spark can process very large amounts of data accross a cluster.
