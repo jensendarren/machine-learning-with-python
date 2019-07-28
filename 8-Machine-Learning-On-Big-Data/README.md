@@ -34,6 +34,9 @@ rdd.count()
 
 ## Introduction to Apache Spark
 
+![Spark Platform](./spark-platform.png "Spark Platform")
+**Figure showing the layers on the Spark Platform**
+
 The official website defines Spark as being a _fast and general engine for large-scale data processing_. Spark can process very large amounts of data accross a cluster.
 
 Spark loads data into special data objects called *resilient distributed data stores* [RDD](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/spark-rdd.html) and Spark can automatically perfom actions that transform and perform actions on these RDDs. You can think of an RDD as essentially being a *large dataframe*.
@@ -42,10 +45,11 @@ Spark will automatically and optimally spread out the work accross clusters if y
 
 ### How Scaling Spark Works
 
+![Spark Cluster Architecture](./spark-cluster-crchitecture.png "Spark Cluster Architecture")
+**Figure showing a high level view of the Spark Cluster Architecture**
+
 From a users / developers point of view all we need to do is create a Spark *driver program* (using Python) that defines the job we need to perform (for example data transformations, analysis, processing, querying etc, etc). Basically, developers who write this driver program do not need to consider that the work may run in a Spark Cluster.
 
 When the program is executed, Spark makes use of the *Cluster Manager* which in turn interfaces with Spark and/or YARN (which is part of Hadoop). Since we have installed Hadoop via Docker we can make use of YARN in these examples.
 
 Finally, the Cluster Manager slices and dices the data and spawns *Executors* (via Spark / YARN) to work on their portion of the data. Each executor manages its on interal cache and tasks. The Cluster Manager, collects resuts from each Executor and assembles the parts into a single result set.
-
-![Spark Cluster Architecture](./spark-cluster-crchitecture.png "Spark Cluster Architecture")
