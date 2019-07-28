@@ -39,3 +39,4 @@ Now practice some Python 101 exercises by opening the file `python101.ipynb`.
 1. [Recommender Systems](/5-Recommender-Systems/)
 1. [Data Mining and Machine Learning](/6-Data-Mining-and-Machine-Learning/)
 1. [Dealing with Real World Data](/7-Dealing-with-Real-World-Data/)
+1. [Machine Learning On Big Data](/8-Machine-Learning-On-Big-Data/)
