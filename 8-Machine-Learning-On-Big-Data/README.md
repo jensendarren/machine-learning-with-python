@@ -34,9 +34,8 @@ rdd.count()
 
 ## Introduction to Apache Spark
 
+**Figure below shows the layers on the Spark Platform**
 ![Spark Platform](./spark-platform.png "Spark Platform")
-
-**Figure showing the layers on the Spark Platform**
 
 The official website defines Spark as being a _fast and general engine for large-scale data processing_. Spark can process very large amounts of data accross a cluster.
 
@@ -46,8 +45,8 @@ Spark will automatically and optimally spread out the work accross clusters if y
 
 ### How Scaling Spark Works
 
+**Figure below shows a high level view of the Spark Cluster Architecture**
 ![Spark Cluster Architecture](./spark-cluster-crchitecture.png "Spark Cluster Architecture")
-**Figure showing a high level view of the Spark Cluster Architecture**
 
 From a users / developers point of view all we need to do is create a Spark *driver program* (using Python) that defines the job we need to perform (for example data transformations, analysis, processing, querying etc, etc). Basically, developers who write this driver program do not need to consider that the work may run in a Spark Cluster.
 
