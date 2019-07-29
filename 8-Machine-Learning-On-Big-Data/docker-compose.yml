@@ -16,7 +16,6 @@ services:
     command: "/start-master.sh"
   spark-worker:
     image: ml/spark:latest
-    # container_name: spark-worker
     depends_on:
       - spark-master
     ports:

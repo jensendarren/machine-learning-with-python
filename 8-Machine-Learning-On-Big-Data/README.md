@@ -156,4 +156,58 @@ nums.count()
 nums.countByValue()
 nums.take(4)
 nums.top(4)
+sum = nums.reduce(lambda a,b:a+b)
+print(sum) #10
+```
+
+## MLlib
+
+Some usful features provided with MLlib are:
+
+* **Feature Extraction** term freq. inverse doc. freq. - used for building search algorithms
+* **Statistics** Chi-squared test, min, max, variance, mean etc. Sounds simple but it can be applied at scale!
+* **Linear Regression** for linear model predictions
+* **Support Vector Machines** to support stanards SVM modelling accross a large dataset
+
+... as well as all the usual ML algorithms such as Naive Bayes Classifier, Decision Trees, K-Means Clustering, Principal Component Analysis (PCA), Singular Value Decomposition (SVD) as well as a built in algorithm for recommendations called _Alternating Least Squares_.
+
+## MLlib Data Types
+
+* **Vector** - can be _dense_ (stores everything even when there is no specific value for a key) where aws a _sparse_ vector stores on the keys that have a value of interest (so we save on memory if using sparse vectors)
+* **LabeledPoint** - a point that has some label attached to it that conveys some meaning of the dat a
+* **Rating** - used with the inbuilt rating engine
+
+## Example
+
+First copy the `SparkDecisionTree.py` & the `PastHires.csv` files to the running Spark container.
+
+```
+docker cp examples/SparkDecisionTree.py spark-master:/spark/examples/src/main/python/SparkDecisionTree.py
+docker cp examples/PastHires.csv spark-master:/spark/examples/src/main/python/PastHires.csv
+```
+
+Now inside he container run the `spark-submit` command to run the example in the cluster.
+
+```
+./bin/spark-submit examples/src/main/python/SparkDecisionTree.py
+```
+
+You should see a lot of output followed by the final 'learned classification tree model':
+
+```
+Learned classification tree model:
+DecisionTreeModel classifier of depth 4 with 9 nodes
+  If (feature 1 in {0.0})
+   If (feature 5 in {0.0})
+    If (feature 0 <= 0.5)
+     If (feature 3 in {1.0})
+      Predict: 0.0
+     Else (feature 3 not in {1.0})
+      Predict: 1.0
+    Else (feature 0 > 0.5)
+     Predict: 0.0
+   Else (feature 5 not in {0.0})
+    Predict: 1.0
+  Else (feature 1 not in {0.0})
+   Predict: 1.0
 ```
