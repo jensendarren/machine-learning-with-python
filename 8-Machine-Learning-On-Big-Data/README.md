@@ -2,9 +2,10 @@
 
 ### Installation
 
-There is a [Dockerfile](./Dockerfile) and a [docker-compose](./docker-compose.yml) file in this directory. So build and run a Spark 2.4.3 cluster on your machine, simply run:
+There is a [Dockerfile](./Dockerfile) and a [docker-compose](./docker-compose.yml) file in this directory. So build and run a Spark 2.4.3 cluster on your machine, simply run (from this directory):
 
 ```
+docker build -t ml/spark:latest .
 docker-compose up
 ```
 
@@ -225,3 +226,8 @@ Now inside he container run the `spark-submit` command to run the example in the
 ```
 ./bin/spark-submit examples/src/main/python/SparkKMeans.py
 ```
+
+### Further reading
+
+* https://medium.com/@thiagolcmelo/submitting-a-python-job-to-apache-spark-on-docker-b2bd19593a06
+* https://towardsdatascience.com/stop-mocking-me-unit-tests-in-pyspark-using-pythons-mock-library-a4b5cd019d7e
