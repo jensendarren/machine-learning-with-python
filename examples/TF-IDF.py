@@ -7,7 +7,7 @@ conf = SparkConf().setMaster("local").setAppName("SparkTFIDF")
 sc = SparkContext(conf = conf)
 
 # Load documents (one per line).
-rawData = sc.textFile("e:/sundog-consult/Udemy/DataScience/subset-small.tsv")
+rawData = sc.textFile("/spark/examples/src/main/python/subset-small.tsv")
 fields = rawData.map(lambda x: x.split("\t"))
 documents = fields.map(lambda x: x[3].split(" "))
 

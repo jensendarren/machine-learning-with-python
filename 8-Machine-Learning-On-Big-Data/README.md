@@ -215,7 +215,7 @@ DecisionTreeModel classifier of depth 4 with 9 nodes
 
 ## K-Means Clustering Example
 
-First copy the `SparkKMeans.py.py` file to the running Spark container.
+First copy the `SparkKMeans.py` file to the running Spark container.
 
 ```
 docker cp examples/SparkKMeans.py spark-master:/spark/examples/src/main/python/SparkKMeans.py
@@ -248,6 +248,23 @@ In practice we would use the LOG of the TD-IDF since the words are usually expon
 Another thing is that TF-IDF assumes we are dealing only with a 'bag of words' where each word is independent of the other and there is no linking between words in a document. Its also important to consider how to handle acronyms, mis-spelling, typos, abbreviations, slang and so on in the document and figure out ways to clean that data!
 
 Once a document has been parsed into a bag of words these can be represented by a hash number - so basically each word will map to a number.
+
+## TF / IDF Example
+
+First copy the `TF-IDF.py` and the `subset-small.tsv` file to the running Spark container. 
+
+**NOTE**: If you can't find the `subset-small.tsv` file then you can download it from [Sundog site](http://media.sundog-soft.com/Udemy/DataScience.zip).
+
+```
+docker cp examples/TF-IDF.py spark-master:/spark/examples/src/main/python/TF-IDF.py
+docker cp ../MLCourse-examples/subset-small.tsv spark-master:/spark/examples/src/main/python/subset-small.tsv
+```
+
+Now inside he container run the `spark-submit` command to run the example in the cluster.
+
+```
+./bin/spark-submit examples/src/main/python/TF-IDF.py
+```
 
 ### Further Reading
 
