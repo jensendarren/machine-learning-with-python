@@ -266,6 +266,21 @@ Now inside he container run the `spark-submit` command to run the example in the
 ./bin/spark-submit examples/src/main/python/TF-IDF.py
 ```
 
+## Linear Regression Example
+
+First copy the `SparkLinearRegression.py` and the `regression.txt` file to the running Spark container. 
+
+```
+docker cp examples/SparkLinearRegression.py spark-master:/spark/examples/src/main/python/SparkLinearRegression.py
+docker cp examples/regression.txt spark-master:/spark/examples/src/main/python/regression.txt
+```
+
+Now inside he container run the `spark-submit` command to run the example in the cluster.
+
+```
+./bin/spark-submit examples/src/main/python/SparkLinearRegression.py
+```
+
 ### Further Reading
 
 * https://medium.com/@thiagolcmelo/submitting-a-python-job-to-apache-spark-on-docker-b2bd19593a06
