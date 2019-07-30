@@ -177,7 +177,7 @@ Some usful features provided with MLlib are:
 * **LabeledPoint** - a point that has some label attached to it that conveys some meaning of the dat a
 * **Rating** - used with the inbuilt rating engine
 
-## Example
+## Decision Tree Example
 
 First copy the `SparkDecisionTree.py` & the `PastHires.csv` files to the running Spark container.
 
@@ -210,4 +210,18 @@ DecisionTreeModel classifier of depth 4 with 9 nodes
     Predict: 1.0
   Else (feature 1 not in {0.0})
    Predict: 1.0
+```
+
+## K-Means Clustering Example
+
+First copy the `SparkKMeans.py.py` file to the running Spark container.
+
+```
+docker cp examples/SparkKMeans.py spark-master:/spark/examples/src/main/python/SparkKMeans.py
+```
+
+Now inside he container run the `spark-submit` command to run the example in the cluster.
+
+```
+./bin/spark-submit examples/src/main/python/SparkKMeans.py
 ```
