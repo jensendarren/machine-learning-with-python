@@ -227,7 +227,29 @@ Now inside he container run the `spark-submit` command to run the example in the
 ./bin/spark-submit examples/src/main/python/SparkKMeans.py
 ```
 
-### Further reading
+## TF / IDF
+
+Typically TF-IDF is used for building search engine algorithums.
+
+* **Term Frequency** - How often a word occurs in a document. So a word that occurs frequently is probably important to that documents meaning.
+
+* **Document Frequency** - How often a word occurs in a set of documents - for example all documetns in Wikipedia or every document in the Internet (just ask Google!).
+
+* **Inverse Document Frequency** 
+
+A measure of the relevancy of a term to a document could be expressed as:
+
+Term Frequency / Document Frequency
+
+So its the measure of importance of a word in an overall body of documents.
+
+In practice we would use the LOG of the TD-IDF since the words are usually exponentially distributed - which helps to give a better weighting of a words overall popularity.
+
+Another thing is that TF-IDF assumes we are dealing only with a 'bag of words' where each word is independent of the other and there is no linking between words in a document. Its also important to consider how to handle acronyms, mis-spelling, typos, abbreviations, slang and so on in the document and figure out ways to clean that data!
+
+Once a document has been parsed into a bag of words these can be represented by a hash number - so basically each word will map to a number.
+
+### Further Reading
 
 * https://medium.com/@thiagolcmelo/submitting-a-python-job-to-apache-spark-on-docker-b2bd19593a06
 * https://towardsdatascience.com/stop-mocking-me-unit-tests-in-pyspark-using-pythons-mock-library-a4b5cd019d7e
