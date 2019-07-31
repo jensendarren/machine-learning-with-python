@@ -40,3 +40,8 @@ Now practice some Python 101 exercises by opening the file `python101.ipynb`.
 1. [Data Mining and Machine Learning](/6-Data-Mining-and-Machine-Learning/)
 1. [Dealing with Real World Data](/7-Dealing-with-Real-World-Data/)
 1. [Machine Learning On Big Data](/8-Machine-Learning-On-Big-Data/)
+
+### Further Reading
+
+* [Submitting a python job to Apache Spark on docker] https://medium.com/@thiagolcmelo/submitting-a-python-job-to-apache-spark-on-docker-b2bd19593a06
+* [Unit tests in pyspark using pythons mock library]https://towardsdatascience.com/stop-mocking-me-unit-tests-in-pyspark-using-pythons-mock-library-a4b5cd019d7e
