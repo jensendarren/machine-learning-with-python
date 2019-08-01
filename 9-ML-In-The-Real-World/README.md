@@ -80,7 +80,6 @@ This means that the experiement did **not** have any affect on the behaviour of 
 * **Low P-Value** - means there was an affect from the change (better)
 * **High P-Value**- means there was very little to no affect from the change (worse)
 
-
 Before running the experiment you might want to choose the threshold for the P-Value. Perhaps 1% or maybe 5%. Need to agree with the business area owners.
 
 When the experiment is complete, measure the P-Value and if its less than the threshold agreed on then you can immediately reject teh null hypthesis and...
@@ -88,10 +87,22 @@ When the experiment is complete, measure the P-Value and if its less than the th
 * If its a positive change, roll it out to Production!
 * If its a negative change, discard the experiment immediately as its probably loosing the business money!
 
-### Overview
-
 What we ideally are looking for then is **a heigh T value and a low P value**.
 
 ## Example T-Value and P-Value
 
 Open up Jupyter notebook [TTest](examples/TTest.ipynb) and have a play around!
+
+### How long to run an experiment
+
+It depends! 
+
+Main thing is to cut the experiment as soon as you can because they are expensive. Since also **running multiple experiments at the same time could conflict with the results** its best to run only one experiment at a time. 
+
+So if the experimenet you are running is not showing any significance after a while (this timeframe is up to you!) then you might want to consider pulling the plug on that experiement and startig up something new (which might lead to more valuable reusults).
+
+Other points when you can conclude an experiment are:
+
+* You see either +ve or -ve significance (at or below the threshold in the P-Value). As mentioned above, if +ve then roll that change out to Production and if -ve then abandon the change (and the experiment) and move on to the next expriment.
+* If you do NOT observe any trends over time with the P-Value. Simply plot the changing P-Value over time and unless you see that it is clearly tending towards 0 (or at least your chosen threshold for the P-Value) then it might be a good indicator that there will *never* be any movment towards signigicance.
+* You reach an agreed upper bound on time for running the experiment and choose this wisely since, as mentioend, we can only really run **one experiement at a time on a site** so don't waste time running an experiement that will never converge as you could be missing out on a opporutunity by not running a different experiemnt that could be successful!
