@@ -91,3 +91,7 @@ When the experiment is complete, measure the P-Value and if its less than the th
 ### Overview
 
 What we ideally are looking for then is **a heigh T value and a low P value**.
+
+## Example T-Value and P-Value
+
+Open up Jupyter notebook [TTest](examples/TTest.ipynb) and have a play around!
