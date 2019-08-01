@@ -106,3 +106,45 @@ Other points when you can conclude an experiment are:
 * You see either +ve or -ve significance (at or below the threshold in the P-Value). As mentioned above, if +ve then roll that change out to Production and if -ve then abandon the change (and the experiment) and move on to the next expriment.
 * If you do NOT observe any trends over time with the P-Value. Simply plot the changing P-Value over time and unless you see that it is clearly tending towards 0 (or at least your chosen threshold for the P-Value) then it might be a good indicator that there will *never* be any movment towards signigicance.
 * You reach an agreed upper bound on time for running the experiment and choose this wisely since, as mentioend, we can only really run **one experiement at a time on a site** so don't waste time running an experiement that will never converge as you could be missing out on a opporutunity by not running a different experiemnt that could be successful!
+
+## A/B Test Gotchas
+
+Sometimes P-Value is not the truth so its important to understand the reasons why a seemingly good P-Value may not be providing the right expectation.
+
+### Correlation does not imply causation
+
+So even when P-Value is at or below (on the +ve side!) of your threshold there could still be something misleading so take note!
+
+* It may stil be random
+* Other factors could be affecting P-Value
+* Use the results as part of the overall decision making
+
+### Novelty Effects
+
+So just because there is a change it actually affects the results! Meaning that regular customers behave differenly just because of the change. They may be used to seeing the button as orange and when its changed to blue they will react to it just because of the novelty effect.
+
+A way to test that is to run the experiment later on to validate the impact. For example, lets say you do change to a blue button. Maybe run the experiement again in 1 year - this time trying the oragnge button (basically the same button that 'lost' the previous experiment). You might actually see that the orange button wins again for the same reason - that customers, at the point, will be used to the blue button and now take more interest in the orange button so the orange button 'wins'. This in fact goes some way to prove it was indeed a novelty effect in the first place!
+
+Also since the experiement is only run for a short time (over the full lifetime of the website) then its impossible to measure the long term effects of the change (and thereby remove the novelty effect has on the results).
+
+### Sasonal Effects
+
+Be aware that the season can affect results. For example summer holidays, religious holidays, during a major storm - basically running an experiment during a period when things arn't the 'norm' can effect results.
+
+### Selection Bias
+
+Users who see A and users who see version B should, of course, be random. Sometimes it isn't really. The reasons are:
+
+* The random assignment is based somehow on the ID of the user - BUT customers with a low ID (usually meaning the first joiners to your site!) are better customers than the ones with the higher ID values (the customers who joined much later)
+
+* Run an A/A test which is a way to test your A/B framework. The results of this test should show no significance at all (both should behave the same since there is no differences to test). This way we can check that the A/B framework we are using indeed does select users in a random way.
+
+* Another thing is the session length. We must ensure that whatever group a user ends up in (A or B) that they *stay* in that group for the duration of the session!
+
+### Data Pollution
+
+Robots can skew data. Other causes are hackers attempting to get into the site etc. This needs to be cleaned before calculating P and T values.
+
+### Attribution Errors
+
+If you do happen to run multiple experiments at once, will they conflict with one another? Need to decide if its a good idea to run the two experiments simultaneously or not.

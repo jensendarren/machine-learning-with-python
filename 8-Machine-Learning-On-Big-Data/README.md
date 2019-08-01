@@ -280,8 +280,3 @@ Now inside he container run the `spark-submit` command to run the example in the
 ```
 ./bin/spark-submit examples/src/main/python/SparkLinearRegression.py
 ```
-
-### Further Reading
-
-* https://medium.com/@thiagolcmelo/submitting-a-python-job-to-apache-spark-on-docker-b2bd19593a06
-* https://towardsdatascience.com/stop-mocking-me-unit-tests-in-pyspark-using-pythons-mock-library-a4b5cd019d7e
