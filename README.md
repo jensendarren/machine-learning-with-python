@@ -40,6 +40,7 @@ Now practice some Python 101 exercises by opening the file `python101.ipynb`.
 1. [Data Mining and Machine Learning](/6-Data-Mining-and-Machine-Learning/)
 1. [Dealing with Real World Data](/7-Dealing-with-Real-World-Data/)
 1. [Machine Learning On Big Data](/8-Machine-Learning-On-Big-Data/)
+1. [Machine Learning In The Real World](/9-ML-In-The-Real-World/)
 
 ### Further Reading
 
